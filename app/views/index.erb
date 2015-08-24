@@ -1,0 +1,23 @@
+
+<div class="container">
+
+  <form action='/sorted_word' method='post'>
+    <input name='word' type='text' placeholder='your word'>
+    <input type='submit'>
+
+  </form>
+
+  <p>Your word: <%= @input %></p>
+  <p>Sorted word: <%= @sorted_word %> </p>
+
+  <p>Anagrams: </p>
+  <table>
+  <% @anagrams.each do |word| %>
+    <tr>
+      <td> <%= word %> </td>
+    </tr>
+    <% end %>
+
+  </table>
+</div>
+
